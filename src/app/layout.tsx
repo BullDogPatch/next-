@@ -15,13 +15,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html
+      lang='en'
+      className='h-screen'
+    >
       <body className={`${inter.className}`}>
         <header style={{ backgroundColor: 'lightblue', padding: '1rem' }}>
           Header
         </header>
         {children}
-        <footer className='sw-full h-12 bg-gray-900'>Footer</footer>
+        <footer className='w-full h-12 bg-gray-900'>Footer</footer>
       </body>
     </html>
   );
