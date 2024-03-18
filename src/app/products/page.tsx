@@ -1,10 +1,36 @@
+import Link from 'next/link';
+
 export default function ProductList() {
+  const productId = 100;
   return (
     <>
       <h1>Product List</h1>
-      <h2>Product 1</h2>
-      <h2>Product 2</h2>
-      <h2>Product 3</h2>
+      <h2>
+        <Link href='/products/1'>Product 1</Link>
+      </h2>
+      <h2>
+        <Link href='/products/2'>Product 2</Link>
+      </h2>
+      <h2 className='mb-4'>
+        <Link
+          href='/products/3'
+          replace
+        >
+          Product 3
+        </Link>
+      </h2>
+
+      <h2 className='mb-4'>
+        <Link href={`/products/${productId}`}>Product {productId}</Link>
+      </h2>
+      <Link
+        href='/'
+        className='mt-5 px-4 py-2 bg-black text-white rounded'
+      >
+        Home
+      </Link>
+
+      <div className='py-6'></div>
     </>
   );
 }

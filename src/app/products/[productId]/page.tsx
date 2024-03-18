@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 type Props = {
   params: {
@@ -20,5 +21,15 @@ export const generateMetadata = async ({
 };
 
 export default function ProductDetails({ params }: Props) {
-  return <h1>Details About Product {params.productId}</h1>;
+  return (
+    <div>
+      <h1>Details About Product {params.productId}</h1>
+      <Link
+        href='/products'
+        className='m-5 px-4 py-2 bg-black text-white rounded'
+      >
+        Back
+      </Link>
+    </div>
+  );
 }
