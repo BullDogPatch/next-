@@ -19,7 +19,7 @@ export default function RootLayout({
       lang='en'
       className='h-screen'
     >
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} `}>
         <header style={{ backgroundColor: 'lightblue', padding: '1rem' }}>
           Header
         </header>
