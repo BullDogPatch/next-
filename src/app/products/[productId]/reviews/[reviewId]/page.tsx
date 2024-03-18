@@ -1,5 +1,9 @@
 import { notFound } from 'next/navigation';
 
+const getRandomInt = (count: number) => {
+  return Math.floor(Math.random() * count);
+};
+
 export default function ReviewDetails({
   params,
 }: {
@@ -8,6 +12,11 @@ export default function ReviewDetails({
     reviewId: string;
   };
 }) {
+  const random = getRandomInt(3);
+  console.log(random);
+  if (random === 1) {
+    throw new Error('Error Loading Review');
+  }
   if (parseInt(params.reviewId) > 1000) {
     notFound();
   }
